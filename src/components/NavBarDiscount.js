@@ -1,13 +1,19 @@
 import React from "react";
-import { CloseButton } from "react-bootstrap";
+import styled from "styled-components";
 
 const NavBarDiscount = () => {
   return (
-    <div className="container justify-content-center d-flex p-3 m-1 ">
+    <Wrapper className="container  ">
       <h4>Save 30% - 60% in each orders you purchase</h4>
-      <CloseButton />
-    </div>
+      <hr />
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  .btn {
+    margin-left: 15rem;
+  }
+`;
 
 export default NavBarDiscount;
