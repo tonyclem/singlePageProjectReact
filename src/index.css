@@ -14,3 +14,33 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --on-primary: #101010;
+  --on-primary-color: #ddd;
+  --on-background: #ffffff;
+  --background: #f1f1f1;
+  --on-primary-footer: #dddddd;
+  --clr-primary-1: hsl(112, 82%, 74%);
+  --clr-primary-5: hsl(112, 91%, 34%);
+  --clr-primary-7: hsl(112, 94%, 20%);
+  --clr-primary-10: hsl(112, 53%, 88%);
+  --clr-green-dark: #000;
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-white: #fff;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --transition: all 0.3s linear;
+  --radius: 0.25rem;
+  --clr-error: hsl(0, 100%, 68%);
+}
