@@ -44,7 +44,7 @@ const Wrapper = styled.div`
 
     .nav-logo {
       img {
-        width: 80px;
+        width: 70px;
         border-radius: 50%;
       }
     }

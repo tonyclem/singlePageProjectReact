@@ -1,11 +1,12 @@
 import React from "react";
-import { FashionImage, NavBar } from "../components";
+import { FashionImage, NavBar, HeroPage } from "../components";
 
 const HomePage = () => {
   return (
     <div>
       <FashionImage />
       <NavBar />
+      <HeroPage />
     </div>
   );
 };
