@@ -1,6 +1,7 @@
 const initialState = {
   product_loading: false,
-  categories: [],
+  product_error: false,
+  productCategory: [],
   products: [],
 };
 
