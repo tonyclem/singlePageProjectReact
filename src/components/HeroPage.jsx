@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import AsideNav from "./AsideNav";
-import SliderNav from "./SliderNav";
+import SliderCarousel from "./SliderNav";
 import TrackBar from "./TrackBar";
 
 const HeroPage = () => {
@@ -9,7 +9,7 @@ const HeroPage = () => {
     <Wrapper>
       <div>
         <AsideNav />
-        <SliderNav />
+        <SliderCarousel />
         <TrackBar />
       </div>
     </Wrapper>
