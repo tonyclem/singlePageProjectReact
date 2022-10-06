@@ -4,7 +4,7 @@ export const products_url =
 export const carouseImages = [
   {
     id: 1,
-    images: "https://i.postimg.cc/SNp47CLq/Images-Carousel.jpg",
+    images: "https://i.postimg.cc/K8009Q8N/full-Length.jpg",
     name: "first carousel",
   },
 

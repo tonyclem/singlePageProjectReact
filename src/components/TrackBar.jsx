@@ -1,37 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import { carouseImages } from "../utils/Constants";
-import images from "../assets/fashion-logo.webp";
+import { useProductsContext } from "../context/Products_context";
 
 const TrackBar = () => {
+  const { productScrollImages: scrollImage } = useProductsContext();
   return (
     <Wrapper>
       <div className="container">
         <h4>Top Deals</h4>
         <div className="row">
           <div className="columns">
-            <div className="inner-container">
-              <img src={images} alt="images" />
-              <p>$200</p>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="inner-container">
-              <img src={images} alt="images" />
-              <p>$200</p>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="inner-container">
-              <img src={images} alt="images" />
-              <p>$200</p>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="inner-container">
-              <img src={images} alt="images" />
-              <p>$200</p>
-            </div>
+            {scrollImage.map((scrollImages) => {
+              const { _id: id, name, images, price } = scrollImages;
+              return (
+                <div className="inner-container" key={id}>
+                  <img src={images} alt={name} />
+                  <p>{price}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -45,6 +32,9 @@ const Wrapper = styled.div`
     h4 {
       text-align: center;
       padding: 0.9em 0;
+      position: sticky;
+      top: 0;
+      background-color: #f1f1f1;
     }
 
     background-color: #f1f1f1;
@@ -58,6 +48,7 @@ const Wrapper = styled.div`
         .inner-container {
           background: #fff;
           padding: 0.8rem;
+          border: 6px solid green;
 
           p {
             padding: 0.4rem;

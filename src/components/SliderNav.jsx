@@ -47,7 +47,7 @@ export default class SliderCarousel extends Component {
       slidesToScroll: 1,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 2000,
     };
 
@@ -56,8 +56,8 @@ export default class SliderCarousel extends Component {
         {carouseImages.map((imagesDs) => {
           const { id, images, name } = imagesDs;
           return (
-            <Wrapper>
-              <div key={id} className="wrapper">
+            <Wrapper key={id}>
+              <div className="wrapper">
                 <img src={images} alt={name} className="sliderImg" />
                 <p>{name}</p>
               </div>
