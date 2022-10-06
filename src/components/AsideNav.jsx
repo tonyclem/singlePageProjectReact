@@ -40,10 +40,11 @@ const AsideNav = () => {
 };
 
 const Wrapper = styled.div`
-  margin: 2rem 1rem;
+  margin: 0 1rem;
   .container {
+    border-radius: 10px;
     display: block;
-    padding: 1rem;
+    padding: 0 1rem;
 
     .category-h3 {
       background: #000;

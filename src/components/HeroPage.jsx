@@ -7,7 +7,7 @@ import TrackBar from "./TrackBar";
 const HeroPage = () => {
   return (
     <Wrapper>
-      <div>
+      <div className="products">
         <AsideNav />
         <SliderCarousel />
         <TrackBar />
@@ -17,9 +17,15 @@ const HeroPage = () => {
 };
 
 const Wrapper = styled.div`
-  div {
-    display: flex;
-    justify-content: space-between;
+  .products {
+    display: grid;
+    gap: 1rem 1rem;
+    margin: 2rem auto;
+  }
+  @media (min-width: 768px) {
+    .products {
+      grid-template-columns: 300px 700px 1fr;
+    }
   }
 `;
 
