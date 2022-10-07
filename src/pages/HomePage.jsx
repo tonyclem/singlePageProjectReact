@@ -1,5 +1,10 @@
 import React from "react";
-import { FashionImage, NavBar, HeroPage } from "../components";
+import {
+  FashionImage,
+  NavBar,
+  HeroPage,
+  AdvertDealBanner,
+} from "../components";
 
 const HomePage = () => {
   return (
@@ -7,6 +12,7 @@ const HomePage = () => {
       <FashionImage />
       <NavBar />
       <HeroPage />
+      <AdvertDealBanner />
     </div>
   );
 };

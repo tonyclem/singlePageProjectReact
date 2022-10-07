@@ -16,6 +16,10 @@ const Product_reducers = (state, action) => {
       (carousel) => carousel.carouselImage === true
     );
 
+    const productBannerImages = action.payload.filter(
+      (banner) => banner.bannerImages === true
+    );
+
     return {
       ...state,
       product_loading: false,
@@ -23,6 +27,7 @@ const Product_reducers = (state, action) => {
       productCategory,
       productScrollImages,
       productCarouselImages,
+      productBannerImages,
     };
   }
   if (action.type === "GET_PRODUCT_ERROR") {
