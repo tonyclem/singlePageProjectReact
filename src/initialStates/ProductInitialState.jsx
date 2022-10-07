@@ -1,9 +1,10 @@
 const initialState = {
   product_loading: false,
   product_error: false,
+  products: [],
   productCategory: [],
   productScrollImages: [],
-  products: [],
+  productCarouselImages: [],
 };
 
 export default initialState;

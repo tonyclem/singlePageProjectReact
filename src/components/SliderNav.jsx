@@ -1,73 +1,42 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
-import { carouseImages } from "../utils/Constants";
+// import { carouseImages } from "../utils/Constants";
+import { SampleNextArrow, SamplePrevArrow } from "./SliderFolder/index";
+import { useProductsContext } from "../context/Products_context";
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+const SliderCarousel = () => {
+  const { productCarouselImages: carouseImages } = useProductsContext();
+
+  const settings = {
+    dots: true,
+    speed: 1000,
+    className: "slides",
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    // autoplay: true,
+    autoplaySpeed: 2000,
+  };
+
   return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        // display: "block",
-        background: "black",
-        margin: "0px 2rem",
-      }}
-      onClick={onClick}
-    />
+    <Slider {...settings}>
+      {carouseImages.map((imagesDs) => {
+        const { id, images, name } = imagesDs;
+        return (
+          <Wrapper key={id}>
+            <div className="wrapper">
+              <img src={images} alt={name} className="sliderImg" />
+              <p>{name}</p>
+            </div>
+          </Wrapper>
+        );
+      })}
+    </Slider>
   );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        // display: "block",
-        background: "black",
-        fontSize: "12px",
-        margin: "0px 2rem",
-      }}
-      onClick={onClick}
-    />
-  );
-}
-
-export default class SliderCarousel extends Component {
-  render() {
-    const settings = {
-      dots: true,
-      speed: 1000,
-      className: "slides",
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
-      // autoplay: true,
-      autoplaySpeed: 2000,
-    };
-
-    return (
-      <Slider {...settings}>
-        {carouseImages.map((imagesDs) => {
-          const { id, images, name } = imagesDs;
-          return (
-            <Wrapper key={id}>
-              <div className="wrapper">
-                <img src={images} alt={name} className="sliderImg" />
-                <p>{name}</p>
-              </div>
-            </Wrapper>
-          );
-        })}
-      </Slider>
-    );
-  }
-}
+};
 
 const Wrapper = styled.div`
   .wrapper {
@@ -85,3 +54,5 @@ const Wrapper = styled.div`
     object-fit: contain;
   }
 `;
+
+export default SliderCarousel;

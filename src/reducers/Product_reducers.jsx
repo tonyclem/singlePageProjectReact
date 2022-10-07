@@ -12,7 +12,9 @@ const Product_reducers = (state, action) => {
       (scroll) => scroll.scrollImages === true
     );
 
-    console.log(productScrollImages);
+    const productCarouselImages = action.payload.filter(
+      (carousel) => carousel.carouselImage === true
+    );
 
     return {
       ...state,
@@ -20,6 +22,7 @@ const Product_reducers = (state, action) => {
       products: action.payload,
       productCategory,
       productScrollImages,
+      productCarouselImages,
     };
   }
   if (action.type === "GET_PRODUCT_ERROR") {
