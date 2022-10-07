@@ -18,4 +18,14 @@ export const carouseImages = [
     images: "https://i.postimg.cc/26M93nGd/Girl-Holds-Fashion-Shopping.jpg",
     name: "third carousel",
   },
+  {
+    id: 4,
+    images: "https://i.postimg.cc/26M93nGd/Girl-Holds-Fashion-Shopping.jpg",
+    name: "third carousel",
+  },
+  {
+    id: 4,
+    images: "https://i.postimg.cc/26M93nGd/Girl-Holds-Fashion-Shopping.jpg",
+    name: "third carousel",
+  },
 ];

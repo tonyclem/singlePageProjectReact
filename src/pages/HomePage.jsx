@@ -4,6 +4,7 @@ import {
   NavBar,
   HeroPage,
   AdvertDealBanner,
+  NewProduct,
 } from "../components";
 
 const HomePage = () => {
@@ -13,6 +14,7 @@ const HomePage = () => {
       <NavBar />
       <HeroPage />
       <AdvertDealBanner />
+      <NewProduct />
     </div>
   );
 };
