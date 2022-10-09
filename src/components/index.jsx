@@ -4,6 +4,7 @@ import HeroPage from "./HeroPage";
 import AdvertDealBanner from "./AdvertDealBanner";
 import NewProduct from "./NewProduct";
 import WomanProductCmp from "./WomanProductSuit";
+import MenProductSuit from "./MenProductSult";
 
 export {
   FashionImage,
@@ -12,4 +13,5 @@ export {
   AdvertDealBanner,
   NewProduct,
   WomanProductCmp,
+  MenProductSuit,
 };

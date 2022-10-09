@@ -7,16 +7,16 @@ import Stars from "./Stars";
 import { formatPrice } from "../utils/Helper";
 import Carousel from "react-elastic-carousel";
 
-const WomanProductCmp = () => {
-  const { womanSuitImages: womanSuits } = useProductsContext();
+const MenProductSuit = () => {
+  const { menSuitImages: menSuits } = useProductsContext();
   return (
     <Wrapper>
       <div className="container">
-        <h1> Woman Suits</h1>
+        <h1> Men Suits</h1>
         <hr />
         <div className="container-inner">
           <Carousel itemsToShow={4} pagination={false}>
-            {womanSuits.map((products) => {
+            {menSuits.map((products) => {
               const { _id: id, images, rating, price } = products;
               return (
                 <div className="images-container" key={id}>
@@ -132,4 +132,4 @@ const Wrapper = styled.div`
   }
 `;
 
-export default WomanProductCmp;
+export default MenProductSuit;

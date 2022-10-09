@@ -28,6 +28,10 @@ const Product_reducers = (state, action) => {
       (products) => products.womanSuits === true
     );
 
+    const menSuitImages = action.payload.filter(
+      (products) => products.menSuit === true
+    );
+
     return {
       ...state,
       product_loading: false,
@@ -38,6 +42,7 @@ const Product_reducers = (state, action) => {
       productBannerImages,
       newProductsImages,
       womanSuitImages,
+      menSuitImages,
     };
   }
   if (action.type === "GET_PRODUCT_ERROR") {
