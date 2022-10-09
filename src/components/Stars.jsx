@@ -9,7 +9,7 @@ const Stars = ({ reviews }) => {
       <span key={index}>
         {reviews >= index + 1 ? (
           <BsStarFill />
-        ) : reviews < number ? (
+        ) : reviews >= number ? (
           <BsStarHalf />
         ) : (
           <BsStar />
@@ -32,11 +32,8 @@ const Wrapper = styled.div`
     font-size: 1rem;
     margin-right: 0.25rem;
   }
-  p {
-    margin-left: 0.5rem;
-    margin-bottom: 0;
-  }
-  margin-bottom: 0.5rem;
+
+  margin-bottom: 0.2rem;
 `;
 
 export default Stars;

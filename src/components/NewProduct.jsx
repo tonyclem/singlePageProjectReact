@@ -2,171 +2,46 @@ import React from "react";
 import styled from "styled-components";
 import { BsStar, BsHeart, BsCart3 } from "react-icons/bs";
 import { BiRefresh } from "react-icons/bi";
-import images from "../assets/fashion-logo.webp";
+// import images from "../assets/fashion-logo.webp";
+import { useProductsContext } from "../context/Products_context";
+import Stars from "./Stars";
 
 const NewProduct = () => {
+  const { newProductsImages: newProducts } = useProductsContext();
+
   return (
     <Wrapper>
       <div className="container">
         <h1> New Products</h1>
         <hr />
         <div className="container-inner">
-          <div className="images-container">
-            <img src={images} alt="name" />
-            {/* icon Container */}
-            <div className="icon-Container">
-              <span className="icon-heart">
-                <BsHeart className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BiRefresh className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BsCart3 className="heart" />
-              </span>
-            </div>
-            <div className="footer">
-              <h6>$55</h6>
-              <div className="btn-icon">
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
+          {newProducts.map((products) => {
+            const { _id: id, name, images, rating } = products;
+            return (
+              <div className="images-container" key={id}>
+                <img src={images} alt="name" />
+                {/* icon Container */}
+                <div className="icon-Container">
+                  <span className="icon-heart">
+                    <BsHeart className="heart" />
+                  </span>
+                  <span className="icon-heart">
+                    <BiRefresh className="heart" />
+                  </span>
+                  <span className="icon-heart">
+                    <BsCart3 className="heart" />
+                  </span>
+                </div>
+                <div className="footer">
+                  <h6>$55</h6>
+                  <div className="btn-icon">
+                    <Stars {...rating} className="star-icon" />
+                  </div>
+                  <p>smile fashion</p>
+                </div>
               </div>
-              <p>smile fashion</p>
-            </div>
-          </div>
-          <div className="images-container">
-            <img src={images} alt="name" />
-            {/* icon Container */}
-            <div className="icon-Container">
-              <span className="icon-heart">
-                <BsHeart className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BiRefresh className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BsCart3 className="heart" />
-              </span>
-            </div>
-            <div className="footer">
-              <h6>$55</h6>
-              <div className="btn-icon">
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-              </div>
-              <p>smile fashion</p>
-            </div>
-          </div>
-          <div className="images-container">
-            <img src={images} alt="name" />
-            {/* icon Container */}
-            <div className="icon-Container">
-              <span className="icon-heart">
-                <BsHeart className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BiRefresh className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BsCart3 className="heart" />
-              </span>
-            </div>
-            <div className="footer">
-              <h6>$55</h6>
-              <div className="btn-icon">
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-              </div>
-              <p>smile fashion</p>
-            </div>
-          </div>
-          <div className="images-container">
-            <img src={images} alt="name" />
-            {/* icon Container */}
-            <div className="icon-Container">
-              <span className="icon-heart">
-                <BsHeart className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BiRefresh className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BsCart3 className="heart" />
-              </span>
-            </div>
-            <div className="footer">
-              <h6>$55</h6>
-              <div className="btn-icon">
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-              </div>
-              <p>smile fashion</p>
-            </div>
-          </div>
-          <div className="images-container">
-            <img src={images} alt="name" />
-            {/* icon Container */}
-            <div className="icon-Container">
-              <span className="icon-heart">
-                <BsHeart className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BiRefresh className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BsCart3 className="heart" />
-              </span>
-            </div>
-            <div className="footer">
-              <h6>$55</h6>
-              <div className="btn-icon">
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-              </div>
-              <p>smile fashion</p>
-            </div>
-          </div>
-          <div className="images-container">
-            <img src={images} alt="name" />
-            {/* icon Container */}
-            <div className="icon-Container">
-              <span className="icon-heart">
-                <BsHeart className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BiRefresh className="heart" />
-              </span>
-              <span className="icon-heart">
-                <BsCart3 className="heart" />
-              </span>
-            </div>
-            <div className="footer">
-              <h6>$55</h6>
-              <div className="btn-icon">
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-                <BsStar className="star-icon" />
-              </div>
-              <p>smile fashion</p>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </Wrapper>
@@ -209,6 +84,7 @@ const Wrapper = styled.div`
         img {
           width: 199px;
           height: 220px;
+          border-radius: 5px;
         }
 
         .icon-Container {

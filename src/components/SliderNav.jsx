@@ -24,7 +24,7 @@ const SliderCarousel = () => {
   return (
     <Slider {...settings}>
       {carouseImages.map((imagesDs) => {
-        const { id, images, name } = imagesDs;
+        const { _id: id, images, name } = imagesDs;
         return (
           <Wrapper key={id}>
             <div className="wrapper">
