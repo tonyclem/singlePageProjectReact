@@ -7,6 +7,7 @@ const initialState = {
   productCarouselImages: [],
   productBannerImages: [],
   newProductsImages: [],
+  womanSuitImages: [],
 };
 
 export default initialState;

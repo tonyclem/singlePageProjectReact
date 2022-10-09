@@ -5,6 +5,7 @@ import {
   HeroPage,
   AdvertDealBanner,
   NewProduct,
+  WomanProductCmp,
 } from "../components";
 
 const HomePage = () => {
@@ -15,6 +16,7 @@ const HomePage = () => {
       <HeroPage />
       <AdvertDealBanner />
       <NewProduct />
+      <WomanProductCmp />
     </div>
   );
 };
