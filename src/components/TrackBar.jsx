@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useProductsContext } from "../context/Products_context";
+import { formatPrice } from "../utils/Helper";
 
 const TrackBar = () => {
   const { productScrollImages: scrollImage } = useProductsContext();
@@ -15,7 +16,7 @@ const TrackBar = () => {
               return (
                 <div className="inner-container" key={id}>
                   <img src={images} alt={name} />
-                  <p>{price}</p>
+                  <p>{formatPrice(price)}</p>
                 </div>
               );
             })}

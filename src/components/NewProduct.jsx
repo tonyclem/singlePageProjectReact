@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { BsStar, BsHeart, BsCart3 } from "react-icons/bs";
+import { BsHeart, BsCart3 } from "react-icons/bs";
 import { BiRefresh } from "react-icons/bi";
-// import images from "../assets/fashion-logo.webp";
 import { useProductsContext } from "../context/Products_context";
 import Stars from "./Stars";
+import { formatPrice } from "../utils/Helper";
 
 const NewProduct = () => {
   const { newProductsImages: newProducts } = useProductsContext();
@@ -16,7 +16,7 @@ const NewProduct = () => {
         <hr />
         <div className="container-inner">
           {newProducts.map((products) => {
-            const { _id: id, name, images, rating } = products;
+            const { _id: id, images, rating, price } = products;
             return (
               <div className="images-container" key={id}>
                 <img src={images} alt="name" />
@@ -33,7 +33,7 @@ const NewProduct = () => {
                   </span>
                 </div>
                 <div className="footer">
-                  <h6>$55</h6>
+                  <h6>{formatPrice(price)}</h6>
                   <div className="btn-icon">
                     <Stars {...rating} className="star-icon" />
                   </div>
@@ -105,7 +105,7 @@ const Wrapper = styled.div`
           }
 
           .icon-heart:hover {
-            background-color: #f5f;
+            background-color: green;
             color: #fff;
           }
         }
