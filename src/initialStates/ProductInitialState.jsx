@@ -10,6 +10,7 @@ const initialState = {
   womanSuitImages: [],
   menSuitImages: [],
   centerBannerImages: [],
+  womanPantsImages: [],
 };
 
 export default initialState;

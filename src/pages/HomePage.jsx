@@ -8,6 +8,7 @@ import {
   WomanProductCmp,
   MenProductSuit,
   CenterBanner,
+  WomanProductPants,
 } from "../components";
 
 const HomePage = () => {
@@ -21,6 +22,7 @@ const HomePage = () => {
       <WomanProductCmp />
       <MenProductSuit />
       <CenterBanner />
+      <WomanProductPants />
     </div>
   );
 };

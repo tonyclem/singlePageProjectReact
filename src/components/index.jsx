@@ -6,6 +6,7 @@ import NewProduct from "./NewProduct";
 import WomanProductCmp from "./WomanProductSuit";
 import MenProductSuit from "./MenProductSult";
 import CenterBanner from "./CenterBanner";
+import WomanProductPants from "./WomanProductPants";
 
 export {
   FashionImage,
@@ -16,4 +17,5 @@ export {
   WomanProductCmp,
   MenProductSuit,
   CenterBanner,
+  WomanProductPants,
 };
