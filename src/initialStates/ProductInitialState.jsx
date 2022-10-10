@@ -9,6 +9,7 @@ const initialState = {
   newProductsImages: [],
   womanSuitImages: [],
   menSuitImages: [],
+  centerBannerImages: [],
 };
 
 export default initialState;
