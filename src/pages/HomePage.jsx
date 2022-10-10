@@ -10,6 +10,7 @@ import {
   CenterBanner,
   WomanProductPants,
   MenProductPants,
+  Accessories,
 } from "../components";
 
 const HomePage = () => {
@@ -25,6 +26,7 @@ const HomePage = () => {
       <CenterBanner />
       <WomanProductPants />
       <MenProductPants />
+      <Accessories />
     </div>
   );
 };
