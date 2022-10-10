@@ -12,6 +12,7 @@ import {
   MenProductPants,
   Accessories,
   Policy,
+  Footer,
 } from "../components";
 
 const HomePage = () => {
@@ -29,6 +30,7 @@ const HomePage = () => {
       <MenProductPants />
       <Accessories />
       <Policy />
+      <Footer />
     </div>
   );
 };

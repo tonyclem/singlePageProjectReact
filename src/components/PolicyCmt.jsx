@@ -33,7 +33,6 @@ const Policy = () => {
 };
 
 const Wrapper = styled.div`
-  margin: 3rem 2rem;
   .container {
     background-color: #f1f1f1;
     display: flex;

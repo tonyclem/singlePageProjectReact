@@ -10,6 +10,7 @@ import WomanProductPants from "./WomanProductPants";
 import MenProductPants from "./ManProductPants";
 import Accessories from "./Accessories";
 import Policy from "./PolicyCmt";
+import Footer from "./Footer";
 
 export {
   FashionImage,
@@ -24,4 +25,5 @@ export {
   MenProductPants,
   Accessories,
   Policy,
+  Footer,
 };
