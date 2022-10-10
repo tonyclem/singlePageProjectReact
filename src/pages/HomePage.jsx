@@ -11,6 +11,7 @@ import {
   WomanProductPants,
   MenProductPants,
   Accessories,
+  Policy,
 } from "../components";
 
 const HomePage = () => {
@@ -27,6 +28,7 @@ const HomePage = () => {
       <WomanProductPants />
       <MenProductPants />
       <Accessories />
+      <Policy />
     </div>
   );
 };

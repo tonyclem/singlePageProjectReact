@@ -9,6 +9,7 @@ import CenterBanner from "./CenterBanner";
 import WomanProductPants from "./WomanProductPants";
 import MenProductPants from "./ManProductPants";
 import Accessories from "./Accessories";
+import Policy from "./PolicyCmt";
 
 export {
   FashionImage,
@@ -22,4 +23,5 @@ export {
   WomanProductPants,
   MenProductPants,
   Accessories,
+  Policy,
 };
