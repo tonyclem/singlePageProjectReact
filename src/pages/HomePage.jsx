@@ -13,6 +13,7 @@ import {
   Accessories,
   Policy,
   Footer,
+  PaymentInfo,
 } from "../components";
 
 const HomePage = () => {
@@ -31,6 +32,7 @@ const HomePage = () => {
       <Accessories />
       <Policy />
       <Footer />
+      <PaymentInfo />
     </div>
   );
 };

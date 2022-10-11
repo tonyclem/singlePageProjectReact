@@ -29,3 +29,24 @@ export const carouseImages = [
     name: "third carousel",
   },
 ];
+
+// import American from ".."
+
+export const payments = [
+  {
+    id: 1,
+    images: "https://i.postimg.cc/0NHSywMC/mastercard.png",
+  },
+  {
+    id: 2,
+    images: "https://i.postimg.cc/qR3NBZdk/Visa-Logo.jpg",
+  },
+  {
+    id: 3,
+    images: "https://i.postimg.cc/9Qg0djmm/American-Express.jpg",
+  },
+  {
+    id: 4,
+    images: "https://i.postimg.cc/vZK81LhD/ideal-logos.png",
+  },
+];

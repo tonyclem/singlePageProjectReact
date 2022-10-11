@@ -15,14 +15,14 @@ const Footer = () => {
             <button>Subscribe</button>
           </div>
         </div>
-        <div>
+        <div className="contact-container">
           <h5>Contact Info</h5>
           <div className="address">
             <address>
-              <small>Address</small> : Lorem ipsum, dolor <br /> 34, 1285 DM
+              <small>Address</small>: Lorem ipsum, dolor <br /> 34, 1285 DM
             </address>
             <phone>
-              <small>Phone</small> : 0613459600
+              <small>Phone</small>: 0613459600
             </phone>
           </div>
         </div>
@@ -39,17 +39,22 @@ const Footer = () => {
 };
 
 const Wrapper = styled.div`
-  background: blue;
   color: #fff;
   padding: 3rem 2rem;
+  background: #6c757d;
   .container {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 1rem;
 
+    h5 {
+      font-size: 1.3rem;
+      padding-bottom: 1.2rem;
+    }
+
     div {
       img {
-        width: 70px;
+        width: 75px;
         border-radius: 50%;
       }
 
@@ -62,9 +67,17 @@ const Wrapper = styled.div`
         }
       }
     }
+    .contact-container {
+      .address {
+        address {
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
     .account {
       span {
         display: block;
+        padding: 0.5rem 0;
       }
     }
   }

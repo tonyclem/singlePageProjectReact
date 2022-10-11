@@ -11,6 +11,7 @@ import MenProductPants from "./ManProductPants";
 import Accessories from "./Accessories";
 import Policy from "./PolicyCmt";
 import Footer from "./Footer";
+import PaymentInfo from "./PaymentInfo";
 
 export {
   FashionImage,
@@ -26,4 +27,5 @@ export {
   Accessories,
   Policy,
   Footer,
+  PaymentInfo,
 };
